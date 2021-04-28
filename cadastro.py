@@ -3,8 +3,14 @@ class Cadastro():
         self._lista_pessoas = []
 
     def cadastra(self,pessoa):
-        self._lista_pessoas.append(pessoa)
-        return True
+        existe = self.busca(pessoa.cpf)
+        if(existe == None):
+            self._lista_pessoas.append(pessoa)
+            return True
+        return False
 
     def busca(self,cpf):
-        for lp in self._
+        for lp in self._lista_pessoas:
+            if(lp.cpf == cpf):
+                return lp
+        return None

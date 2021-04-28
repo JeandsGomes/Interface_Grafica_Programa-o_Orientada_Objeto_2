@@ -23,6 +23,13 @@ class Teste_Cadastro(TestCase):
         valor_esperado = True
         self.assertEqual(cadastro.cadastra(pessoa),valor_esperado)
 
+    def test_Cadastro_cadastra_retorna_True(self):
+        pessoa = Pessoa('jeands','Av.PML',2,1)
+        cadastro = Cadastro()
+        valor_esperado = False
+        cadastro.cadastra(pessoa)
+        self.assertEqual(cadastro.cadastra(pessoa),valor_esperado)
+
     def test_Cadastro_cadastra_retorna_valor_esperado(self):
         pessoa = Pessoa('jeands','Av.PML',2,1)
         cadastro = Cadastro()
