@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 #maodificação
 
 #Funçlão responsavel mostra janelas de aviso
-from PyQt5.QtWodgets import QMessageBox
+from PyQt5.QtWidgets import QMessageBox
 
 from cadastro import Cadastro
 from pessoa import Pessoa
@@ -114,12 +114,43 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         '''modificações'''
-        self.cad = Cadastro()
+        self.cadastro = Cadastro()
         #Adicionar alterações ao bnotão cadastro
-        self.pushButton_cadastrar.clicked.connect(self.bor)
-        self.pushButton_Buscar_busca.connect()
+        self.pushButton_cadastrar.clicked.connect(self.botaoCadastra)
+        self.pushButton_Buscar_busca.clicked.connect(self.botaoBusca)
+
+    def botaoCadastra(self):
+        nome = self.lineEdit_Cadastro_Nome.text()
+        endereco = self.lineEdit_Cadastro_Endereco.text()
+        cpf = self.lineEdit_Cadastro_CPF.text()
+        nascimento = self.lineEdit_Cadastro_Nascimento.text()
+        if not(nome == '' or endereco == '' or cpf == '' or nascimento == '') :
+            pessoa = Pessoa(nome,endereco,cpf,nascimento)
+            if (self.cadastro.cadastra(pessoa)):
+                QMessageBox.information(None,'POOII','Cadastro realizado com sucesso!')
+                #Apagar os campos apos cadastrar
+                self.lineEdit_Cadastro_Nome.setText('')
+                self.lineEdit_Cadastro_Endereco.setText('')
+                self.lineEdit_Cadastro_CPF.setText('')
+                self.lineEdit_Cadastro_Nascimento.setText('')
+            else:
+                QMessageBox.information(None,'POOII','O CPF informado já está cadastrado na base de dados')
+        else:
+            QMessageBox.information(None,'POOII','Todos os valores deven ser preenchidos!')
+
+    def botaoBusca(self):
+        cpf = self.lineEdit_Busca_CPF.text()
+        pessoa = self.cadastro.busca(cpf)
+        if (pessoa!=None):
+            #self.lineEdit_7.setText(pessoa.nome)
+            #self.lineEdit_6.setText(pessoa.endereco)
+            #self.lineEdit_8.setText(pessoa.nascimento)
+            QMessageBox.information(None,'POOII','Nome: {}\nEndereco: {}\nNascimento: {}'.format(pessoa.nome,pessoa.endereco,pessoa.nascimento))
+        else:
+            QMessageBox.information(None,'POOII','CPF informado não cadastrado')
 
 
+    #def botaoBusca(self):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
