@@ -41,7 +41,7 @@
      <number>0</number>
     </property>
     <item>
-     <widget class="QFrame" name="frame">
+     <widget class="QFrame" name="frame_cabecalho">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
@@ -56,7 +56,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="label_Controle_estoque_pessoas">
          <property name="font">
           <font>
            <family>Bahnschrift SemiBold SemiConden</family>
@@ -81,7 +81,7 @@ margin-right: 10px;
      </widget>
     </item>
     <item>
-     <widget class="QFrame" name="frame_2">
+     <widget class="QFrame" name="frame_opcoes">
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -90,7 +90,7 @@ margin-right: 10px;
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButton_cadastro">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -120,7 +120,7 @@ QPushButton:pressed{
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="pushButton_busca">
          <property name="minimumSize">
           <size>
            <width>0</width>

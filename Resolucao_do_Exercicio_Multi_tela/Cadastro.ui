@@ -56,7 +56,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="label_cadastro">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -103,7 +103,7 @@ margin-right: 100px;
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QLabel" name="label_cadastro_nome">
            <property name="font">
             <font>
              <family>Bahnschrift SemiBold SemiConden</family>
@@ -121,7 +121,7 @@ margin-right: 100px;
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="label_cadastro_endereco">
            <property name="font">
             <font>
              <family>Bahnschrift SemiBold SemiConden</family>
@@ -139,7 +139,7 @@ margin-right: 100px;
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="label_cadastro_cpf">
            <property name="font">
             <font>
              <family>Bahnschrift SemiBold SemiConden</family>
@@ -157,7 +157,7 @@ margin-right: 100px;
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="label_cadastro_nascimento">
            <property name="font">
             <font>
              <family>Bahnschrift SemiBold SemiConden</family>
@@ -179,7 +179,7 @@ margin-right: 100px;
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLineEdit" name="lineEdit_busca_cpf">
+          <widget class="QLineEdit" name="lineEdit_cadastro_nome">
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	border: 2px solid rgb(45,45,45);
@@ -192,7 +192,7 @@ margin-right: 100px;
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_busca_cpf_2">
+          <widget class="QLineEdit" name="lineEdit_cadastro_endereco">
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	border: 2px solid rgb(45,45,45);
@@ -205,7 +205,7 @@ margin-right: 100px;
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_busca_cpf_3">
+          <widget class="QLineEdit" name="lineEdit_cadastro_cpf">
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	border: 2px solid rgb(45,45,45);
@@ -218,7 +218,7 @@ margin-right: 100px;
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_busca_cpf_4">
+          <widget class="QLineEdit" name="lineEdit_cadastro_nascimento">
            <property name="styleSheet">
             <string notr="true">QLineEdit{
 	border: 2px solid rgb(45,45,45);
@@ -245,7 +245,7 @@ margin-right: 100px;
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButton_cadastro_cadastrar">
          <property name="minimumSize">
           <size>
            <width>0</width>
